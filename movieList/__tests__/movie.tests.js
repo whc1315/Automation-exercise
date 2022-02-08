@@ -53,12 +53,6 @@ test("add a movie", async () => {
 
   await deleteButton.click();
 
-  let movie2 = await driver
-    .findElement(By.xpath("//li/button"))
-    .getAttribute("class");
-
-  expect(movie2).toEqual("checked");
-
   await driver.sleep(250);
 
   const deleteMessage = await driver.findElement(By.xpath("//main/aside"));
